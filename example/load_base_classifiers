@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Experiments>
+	<Experiment ID="load_base_classifiers">
+
+		<Method>
+			<MethodType>KFoldCrossValidation</MethodType>
+			<NumberOfFolds>2</NumberOfFolds>
+			<Seed>1</Seed>
+		</Method>
+
+		<ModelParameters>
+			<FrameworkType>hemlock</FrameworkType>
+			<ModelType>LinearRegression</ModelType>
+			<Parameter name="BaseClassifierSetID">1</Parameter>
+		</ModelParameters>
+		
+		<Data>
+			<Method>Auto</Method>
+			<Query>
+				<MissingValues value="no" />
+			</Query>
+		</Data>
+		
+		<Metrics>
+			<Metric type="Accuracy" />
+			<Metric type="Confusion Matrix" />
+		</Metrics>
+
+	</Experiment>
+	
+	<BaseClassifiers>
+		<Set ID="1" Type="LoadModels" Path="baseClassifiers" />
+	</BaseClassifiers>
+</Experiments>

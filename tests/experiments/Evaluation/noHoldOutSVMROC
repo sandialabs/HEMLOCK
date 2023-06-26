@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Experiments>
+	<Experiment ID="noHoldOutSVMROC">
+
+		<Method>
+			<MethodType>NoHoldOut</MethodType>
+		</Method>
+
+		<ModelParameters>
+			<FrameworkType>weka</FrameworkType>
+			<ModelType>SVM</ModelType>
+			<Parameter name="seed">2</Parameter>
+			<Parameter name="epsilon">0.000000000001</Parameter>
+		</ModelParameters>
+		
+		<Data>
+			<Method>Auto</Method>
+			<Query>
+				<NominalAttributes value="yes" />
+				<ContinuousAttributes value="yes" />
+				<MissingValues value="no" />
+			</Query>
+			<!-- Only used when method set to "Manual"
+			<DataSets>
+				<DataSet>
+					<Package>PAMI</Package>
+					<Name>abalone</Name>
+					<Format>modifiedC45</Name>
+				</DataSet>
+			</DataSets>
+			-->
+		</Data>
+		<Metrics>
+			<Metric type="Accuracy" />
+			<Metric type="Confusion Matrix" />
+			<Metric type="ROCAnalysis" positiveClass="1" />
+		</Metrics>
+
+	</Experiment>
+</Experiments>

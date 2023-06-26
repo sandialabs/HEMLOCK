@@ -1,0 +1,1349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Experiments>
+	<Experiment ID="noHoldOutDiversityGeneralDiversity">
+
+		<Method>
+			<MethodType>NoHoldOut</MethodType>
+		</Method>
+
+		<ModelParameters>
+			<FrameworkType>hemlock</FrameworkType>
+			<ModelType>SumRule</ModelType>
+			<Parameter name="BaseClassifierSetID">1</Parameter>
+		</ModelParameters>
+		
+		<Data>
+			<Method>Auto</Method>
+			<Query>
+				<MissingValues value="no" />
+			</Query>
+		</Data>
+		<Metrics>
+			<Metric type="Accuracy" />
+			<Metric type="Confusion Matrix" />
+			<Metric type="Diversity_generalDiversity"/>
+		</Metrics>
+
+	</Experiment>
+	
+	<BaseClassifiers>
+		<Set ID="1" Type="ModelParameters">
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>KNearestNeighbor</ModelType>
+	<Parameter name="numberOfNeighbors">1.0</Parameter>
+</ModelParameters>
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>KNearestNeighbor</ModelType>
+	<Parameter name="numberOfNeighbors">3.0</Parameter>
+</ModelParameters>
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>KNearestNeighbor</ModelType>
+	<Parameter name="numberOfNeighbors">5.0</Parameter>
+</ModelParameters>
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>KNearestNeighbor</ModelType>
+	<Parameter name="numberOfNeighbors">7.0</Parameter>
+</ModelParameters>
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">1</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">5.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">2</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">5.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">3</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">4</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">5</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">6</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">7</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">8</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">9</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">10</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">11</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">12</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">13</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">14</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">15</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">16</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">17</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">18</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">19</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">20</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">21</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">22</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">23</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">24</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">25</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">26</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">27</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">28</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">29</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">30</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">31</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">32</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">33</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">5.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">34</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">5.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">35</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">36</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">37</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">38</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">39</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">40</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">41</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">42</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">43</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">44</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">45</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">46</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">47</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">48</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">49</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">50</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">51</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">52</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">53</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">54</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">55</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">56</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">57</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">58</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">59</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">60</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">61</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">62</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">63</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">64</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">1.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">65</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">5.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">66</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">5.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">67</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">67</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">68</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">69</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">70</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">71</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">72</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">73</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">74</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">75</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">76</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">77</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">78</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">79</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">80</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">81</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">82</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">83</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">84</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">85</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">86</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">87</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">88</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">89</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">90</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">91</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">92</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">93</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">94</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">2.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">95</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">5.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">96</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">5.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">97</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">5.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">98</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">99</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">100</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">101</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">102</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">103</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">104</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">105</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">106</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">107</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">108</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">109</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">110</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">111</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">112</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">113</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">114</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">115</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">116</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">117</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">118</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">119</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">120</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">121</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">122</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">123</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">124</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">125</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">126</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">3.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">127</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">5.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">128</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">129</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">130</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">131</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">132</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">133</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">6.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">134</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">135</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">136</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">137</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">138</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">139</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">7.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">140</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">141</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">142</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">143</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">144</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">145</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">8.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">146</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">147</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">148</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">149</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">150</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">151</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">9.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">152</Parameter>
+	<Parameter name="numberOfFeatures">0.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">153</Parameter>
+	<Parameter name="numberOfFeatures">2.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">154</Parameter>
+	<Parameter name="numberOfFeatures">4.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">155</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>		
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">156</Parameter>
+	<Parameter name="numberOfFeatures">8.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>	
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">157</Parameter>
+	<Parameter name="numberOfFeatures">10.0</Parameter>
+	<Parameter name="maxDepth">10.0</Parameter>
+	<Parameter name="minInstances">4.0</Parameter>
+</ModelParameters>
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>SVM</ModelType>
+	<Parameter name="seed">1</Parameter>
+	<Parameter name="epsilon">0.000000000001</Parameter>
+	<Parameter name="buildLogisticModels">false</Parameter>
+	<Parameter name="complexity">3.0</Parameter>
+</ModelParameters>
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>SVM</ModelType>
+	<Parameter name="seed">2</Parameter>
+	<Parameter name="epsilon">0.000000000001</Parameter>
+	<Parameter name="buildLogisticModels">true</Parameter>
+	<Parameter name="complexity">3.0</Parameter>
+</ModelParameters>
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>SVM</ModelType>
+	<Parameter name="seed">3</Parameter>
+	<Parameter name="epsilon">0.000000000001</Parameter>
+	<Parameter name="buildLogisticModels">true</Parameter>
+	<Parameter name="complexity">2.0</Parameter>
+</ModelParameters>
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>SVM</ModelType>
+	<Parameter name="seed">4</Parameter>
+	<Parameter name="epsilon">0.000000000001</Parameter>
+	<Parameter name="buildLogisticModels">true</Parameter>
+	<Parameter name="complexity">1.0</Parameter>
+</ModelParameters>
+		</Set>
+	</BaseClassifiers>
+</Experiments>

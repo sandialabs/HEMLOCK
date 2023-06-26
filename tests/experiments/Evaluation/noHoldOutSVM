@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Experiments>
+	<Experiment ID="noHoldOutSVM">
+
+		<Method>
+			<MethodType>NoHoldOut</MethodType>
+		</Method>
+
+		<ModelParameters>
+			<FrameworkType>weka</FrameworkType>
+			<ModelType>SVM</ModelType>
+			<Parameter name="seed">2</Parameter>
+			<Parameter name="epsilon">0.000000000001</Parameter>
+		</ModelParameters>
+		
+		<Data>
+			<Method>Auto</Method>
+			<Query>
+				<MissingValues value="no" />
+			</Query>
+		</Data>
+		<Metrics>
+			<Metric type="Accuracy" />
+			<Metric type="Confusion Matrix" />
+		</Metrics>
+
+	</Experiment>
+</Experiments>

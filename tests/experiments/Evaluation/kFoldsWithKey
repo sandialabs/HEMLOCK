@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Experiments>
+	<Experiment ID="kFoldsWithKey">
+
+		<Method>
+			<MethodType>KFoldCrossValidation</MethodType>
+			<NumberOfFolds>4</NumberOfFolds>
+			<Seed>1</Seed>
+		</Method>
+		
+
+		<ModelParameters>
+			<FrameworkType>weka</FrameworkType>
+			<ModelType>RandomTree</ModelType>
+			<Parameter name="seed">2</Parameter>
+		</ModelParameters>
+		
+		<Data>
+			<Method>Auto</Method>
+			<Query>
+				<NominalAttributes value="yes" />
+				<ContinuousAttributes value="yes" />
+				<MissingValues value="no" />
+			</Query>
+			<!-- Only used when method set to "Manual"
+			<DataSets>
+				<DataSet>
+					<Package>PAMI</Package>
+					<Name>abalone</Name>
+					<Format>modifiedC45</Name>
+				</DataSet>
+			</DataSets>
+			-->
+		</Data>
+		<Metrics>
+			<Metric type="Accuracy" />
+			<Metric type="Confusion Matrix" />
+		</Metrics>
+
+	</Experiment>
+</Experiments>

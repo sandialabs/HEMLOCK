@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ $# -lt 1 ]
+then
+	echo "Enter name of class in namespace gov.sandia.hemlock.tests whose tests are to be run"
+else
+	java -cp tests/external-libraries/weka.jar:tests/external-libraries/junit-4.6.jar:bin:$CLASSPATH org.junit.runner.JUnitCore gov.sandia.hemlock.tests.$1
+fi

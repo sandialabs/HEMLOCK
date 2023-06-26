@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Experiments>
+	<Experiment ID="evaluate_ripper">
+
+		<Method>
+			<MethodType>KFoldCrossValidation</MethodType>
+			<NumberOfFolds>4</NumberOfFolds>
+			<Seed>1</Seed>
+		</Method>
+
+		<ModelParameters>
+			<FrameworkType>weka</FrameworkType>
+			<ModelType>RIPPER</ModelType>
+			<Parameter name="minNumber">2</Parameter>
+			<Parameter name="checkErrorRate">true</Parameter>
+			<Parameter name="optimizations">2</Parameter>
+			<Parameter name="usePruning">true</Parameter>
+			<Parameter name="seed">1</Parameter>
+		</ModelParameters>
+		
+		<Data>
+			<Method>Auto</Method>
+			<Query>
+				<NominalAttributes value="yes" />
+				<ContinuousAttributes value="yes" />
+				<MissingValues value="no" />
+			</Query>
+		</Data>
+
+		<Metrics>
+			<Metric type="Accuracy" />
+			<Metric type="Confusion Matrix" />
+		</Metrics>
+
+	</Experiment>
+</Experiments>

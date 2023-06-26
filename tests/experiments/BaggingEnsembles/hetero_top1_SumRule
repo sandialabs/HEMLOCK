@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Experiments>
+	<Experiment ID="hetero_top1_SumRule">
+
+		<Method>
+			<MethodType>KFoldCrossValidation</MethodType>
+			<NumberOfFolds>2</NumberOfFolds>
+			<Seed>1</Seed>
+		</Method>
+
+		<ModelParameters>
+			<FrameworkType>hemlock</FrameworkType>
+			<ModelType>SumRule</ModelType>
+			<Parameter name="BaseClassifierSetID">1</Parameter>
+			<Parameter name="EnsembleGeneration">Bagging</Parameter>
+			<Parameter name="NumberOfBaseClassifiers">20</Parameter>
+			<Parameter name="seed">2</Parameter>
+		</ModelParameters>
+		
+		<Data>
+			<Method>Auto</Method>
+			<Query>
+				<MissingValues value="no" />
+			</Query>
+		</Data>
+		<Metrics>
+			<Metric type="Accuracy" />
+			<Metric type="Confusion Matrix" />
+		</Metrics>
+
+	</Experiment>
+	
+	<BaseClassifiers>
+		<Set ID="1" Type="ModelParameters">
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>KNearestNeighbor</ModelType>
+	<Parameter name="numberOfNeighbors">1.0</Parameter>
+</ModelParameters>
+
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>RandomTree</ModelType>	
+	<Parameter name="seed">1</Parameter>
+	<Parameter name="numberOfFeatures">6.0</Parameter>
+	<Parameter name="maxDepth">5.0</Parameter>
+	<Parameter name="minInstances">0.0</Parameter>
+</ModelParameters>		
+
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>SVM</ModelType>
+	<Parameter name="seed">1</Parameter>
+	<Parameter name="epsilon">0.000000000001</Parameter>
+	<Parameter name="buildLogisticModels">false</Parameter>
+	<Parameter name="complexity">3.0</Parameter>
+</ModelParameters>
+
+<ModelParameters>
+	<FrameworkType>weka</FrameworkType>
+	<ModelType>NaiveBayesian</ModelType>
+</ModelParameters>
+		</Set>
+	</BaseClassifiers>
+</Experiments>

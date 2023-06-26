@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Experiments>
+	<Experiment ID="evaluate_svm">
+
+		<Method>
+			<MethodType>KFoldCrossValidation</MethodType>
+			<NumberOfFolds>4</NumberOfFolds>
+			<Seed>1</Seed>
+		</Method>
+
+		<ModelParameters>
+			<FrameworkType>weka</FrameworkType>
+			<ModelType>SVM</ModelType>
+			<Parameter name="buildLogisticModels">false</Parameter>
+			<Parameter name="complexity">1.0</Parameter>
+			<Parameter name="epsilon">0.000000000001</Parameter>
+			<Parameter name="seed">1</Parameter>
+		</ModelParameters>
+		
+		<Data>
+			<Method>Auto</Method>
+			<Query>
+				<NominalAttributes value="yes" />
+				<ContinuousAttributes value="yes" />
+				<MissingValues value="no" />
+			</Query>
+		</Data>
+
+		<Metrics>
+			<Metric type="Accuracy" />
+			<Metric type="Confusion Matrix" />
+		</Metrics>
+
+	</Experiment>
+</Experiments>

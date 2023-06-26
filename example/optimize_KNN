@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Experiments>
+<Experiment ID="optimize_KNN_0">
+	<Method>
+		<MethodType>NoHoldOut</MethodType>
+	</Method>
+	<ModelParameters>
+		<FrameworkType>weka</FrameworkType>
+		<ModelType>KNearestNeighbor</ModelType>
+		<Parameter name="numberOfNeighbors">1.0</Parameter>
+		<Seed>1</Seed>
+	</ModelParameters>
+	<Data>
+		<Method>Auto</Method>
+		<Query>
+			<NominalAttributes value="yes"/>
+			<ContinuousAttributes value="yes"/>
+			<MissingValues value="no"/>
+		</Query>
+	</Data>
+	<Metrics>
+		<Metric type="Accuracy"/>
+		<Metric type="Confusion Matrix"/>
+	</Metrics>
+</Experiment>
+<Experiment ID="optimize_KNN_1">
+	<Method>
+		<MethodType>NoHoldOut</MethodType>
+	</Method>
+	<ModelParameters>
+		<FrameworkType>weka</FrameworkType>
+		<ModelType>KNearestNeighbor</ModelType>
+		<Parameter name="numberOfNeighbors">3.0</Parameter>
+	</ModelParameters>
+	<Data>
+		<Method>Auto</Method>
+		<Query>
+			<NominalAttributes value="yes"/>
+			<ContinuousAttributes value="yes"/>
+			<MissingValues value="no"/>
+		</Query>
+	</Data>	
+	<Metrics>
+		<Metric type="Accuracy"/>
+		<Metric type="Confusion Matrix"/>
+	</Metrics>
+</Experiment>
+<Experiment ID="optimize_KNN_2">
+	<Method>
+		<MethodType>NoHoldOut</MethodType>
+	</Method>
+	<ModelParameters>
+		<FrameworkType>weka</FrameworkType>
+		<ModelType>KNearestNeighbor</ModelType>
+		<Parameter name="numberOfNeighbors">5.0</Parameter>
+	</ModelParameters>
+	<Data>
+		<Method>Auto</Method>
+		<Query>
+			<NominalAttributes value="yes"/>
+			<ContinuousAttributes value="yes"/>
+			<MissingValues value="no"/>
+		</Query>
+	</Data>
+	<Metrics>
+		<Metric type="Accuracy"/>
+		<Metric type="Confusion Matrix"/>
+	</Metrics>
+</Experiment>
+<Experiment ID="optimize_KNN_3">
+	<Method>
+		<MethodType>NoHoldOut</MethodType>
+	</Method>
+	<ModelParameters>
+		<FrameworkType>weka</FrameworkType>
+		<ModelType>KNearestNeighbor</ModelType>
+		<Parameter name="numberOfNeighbors">7.0</Parameter>
+	</ModelParameters>
+	<Data>
+		<Method>Auto</Method>
+		<Query>
+			<NominalAttributes value="yes"/>
+			<ContinuousAttributes value="yes"/>
+			<MissingValues value="no"/>
+		</Query>
+	</Data>
+	<Metrics>
+		<Metric type="Accuracy"/>
+		<Metric type="Confusion Matrix"/>
+	</Metrics>
+</Experiment>
+<Experiment ID="optimize_KNN_4">
+	<Method>
+		<MethodType>NoHoldOut</MethodType>
+	</Method>
+	<ModelParameters>
+		<FrameworkType>weka</FrameworkType>
+		<ModelType>KNearestNeighbor</ModelType>
+		<Parameter name="numberOfNeighbors">9.0</Parameter>
+	</ModelParameters>
+	<Data>
+		<Method>Auto</Method>
+		<Query>
+			<NominalAttributes value="yes"/>
+			<ContinuousAttributes value="yes"/>
+			<MissingValues value="no"/>
+		</Query>
+	</Data>
+	<Metrics>
+		<Metric type="Accuracy"/>
+		<Metric type="Confusion Matrix"/>
+	</Metrics>
+</Experiment>
+</Experiments>

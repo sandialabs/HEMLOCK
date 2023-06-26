@@ -1,0 +1,1 @@
+<?xml version="1.0" ?><Experiment><NoHoldOut><Summary><experimentName>optimize_KNN_4</experimentName><modelType>KNearestNeighbor</modelType><dataSetName>mixed_2</dataSetName><accuracy>0.9</accuracy></Summary></NoHoldOut></Experiment>

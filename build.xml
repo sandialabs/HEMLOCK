@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+
+<project name="hemlock" default="main" basedir=".">
+
+	<!-- Constants -->
+	<property name="src" value="src"/>
+	<property name="tests.src" value="tests"/>
+	<property name="bin" value="bin"/>
+	<property name="lib" value="lib"/>
+	<property name="lib.wekaInterface" value="lib/HEMLOCKInterfaces.jar"/>
+	<property name="tpl.weka" value="tpl/weka.jar"/>
+	<property name="tpl.jUnit" value="tpl/junit.jar"/>
+	<property name="data" value="data"/>
+	
+
+
+	<target name="main" depends="checkForWeka, checkForJUnit">
+		<echo message="Starting HEMLOCK build."/>
+		<antcall target="printWekaMissingWarning"/>
+		<antcall target="compileHEMLOCK"/>
+		<antcall target="compileHEMLOCKInterfaces"/>
+		<antcall target="printJUnitMissingWarning"/>
+		<antcall target="compileHEMLOCKTests"/>
+	</target>
+
+
+	
+	<target name="compileHEMLOCKTests" if="jUnitAvailable">
+		<mkdir dir="${lib}"/>
+		<mkdir dir="${bin}"/>
+		<echo message="Compiling HEMLOCK Junit Tests source files."/>
+		
+		<javac srcdir="${tests.src}"
+			destdir="${bin}"
+			excludes="gov/sandia/hemlock/wekaInterface/**,gov/sandia/hemlock/cognitiveFoundryInterface/**"
+			debug="on"
+			source="1.6"
+			classpath="${classpath}:${tpl.weka}:${bin}:${tpl.jUnit}"
+		  />
+	</target>
+
+
+
+	<target name="compileHEMLOCK" >
+		<mkdir dir="${lib}"/>
+		<mkdir dir="${bin}"/>
+		<echo message="Compiling HEMLOCK source files."/>
+		<javac srcdir="${src}"
+			destdir="${bin}"
+			excludes="gov/sandia/hemlock/wekaInterface/**,gov/sandia/hemlock/cognitiveFoundryInterface/**"
+			debug="on"
+			source="1.6"
+			classpath="${classpath}:${tpl.weka}"
+		  />
+		<echo message="Packaging HEMLOCK class files into jar."/>
+		<jar destfile="${lib}/HEMLOCK.jar" defaultexcludes="no">
+			<fileset dir="${bin}" casesensitive="yes">
+				<exclude name="gov/sandia/hemlock/wekaInterface/**"/>
+				<exclude name="gov/sandia/hemlock/cognitiveFoundryInterface/**"/>
+			</fileset>
+		    <manifest>
+		    	<attribute name="Main-Class" value="gov.sandia.hemlock.main.RunExperiment"/>
+		    	<attribute name="Class-Path" value="../lib ../${tpl.weka} ../${lib.wekaInterface}"/>
+		  	</manifest>
+		</jar>
+	</target>
+
+
+	
+	<target name="compileHEMLOCKInterfaces"  if="wekaAvailable">
+		<mkdir dir="${lib}"/>
+		<mkdir dir="${bin}"/>
+		<echo message="Compiling HEMLOCKInterfaces source files."/>
+		<javac srcdir="${src}"
+			destdir="${bin}"
+			debug="on"
+			source="1.6"
+			includes="gov/sandia/hemlock/wekaInterface/**"
+			failonerror="false"
+			classpath="${classpath}:${tpl.weka}"
+		/>
+		<echo message="Packaging HEMLOCKInterfaces class files into jar."/>
+		<jar destfile="${lib}/HEMLOCKInterfaces.jar">
+			<fileset dir="${bin}" casesensitive="yes">
+			 	<include name="gov/sandia/hemlock/wekaInterface/**"/>
+			</fileset>
+			<manifest>
+				<attribute name="Extension-Name" value="HEMLOCKInterfaces"/>
+				<attribute name="Specification-Version" value="1.0"/>
+				<attribute name="Implementation-Version" value="1.0.0"/>
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="checkForJUnit">
+		<condition property="jUnitAvailable">
+			<available classpath="${classpath}:${tpl.jUnit}"  classname="org.junit.runner.RunWith"/>
+		</condition>
+	</target>
+
+	<target name="printJUnitMissingWarning" unless="jUnitAvailable">
+		<echo message="JUnit is not present in your class path.  The JUnit test cases for Hemlock will not be compiled."/>
+	</target>
+	
+	<target name="checkForWeka">
+		<condition property="wekaAvailable">
+			<available classpath="${classpath}:${tpl.weka}" classname="weka.classifiers.Classifier"/>
+		</condition>
+	</target>
+
+
+		
+	<target name="printWekaMissingWarning" unless="wekaAvailable">
+		<echo message="Weka is not present in your class path.  The weka interface will not be built."/>
+		<echo message="Please see readme file for instructions on integrating weka."/>
+	</target>
+
+
+
+    	<target name="createJavadoc">
+    		<javadoc access="public" author="true" destdir="doc/javadoc" doctitle="Hemlock" nodeprecated="false"
+		nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false"
+		packagenames="gov.*"  overview="overview.html" source="1.6" sourcepath="src" splitindex="true" use="true" version="true"/>
+	</target>
+	
+
+
+	<target name="createDataSets">
+		<java classname="gov.sandia.hemlock.data.DataSetGenerator" classpath="${classpath}:${bin}">
+			<arg value="${data}"/>
+		</java>
+	</target>
+
+
+	
+	<target name="package">
+		<antcall target="createDataSets"/>
+		<zip destfile="hemlock.zip">
+			<zipfileset dir="." prefix="hemlock/" includes="lib/ src/ data/ example/ doc/ overview.html build.xml README .hemlock_config"/>
+			<zipfileset filemode="777" dir="." prefix="hemlock/" includes="runHemlock"/>
+		</zip>
+	</target>
+	
+</project>

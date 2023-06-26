@@ -1,0 +1,2 @@
+#!/bin/bash
+java -Xms512m -Xmx1536m -jar lib/HEMLOCK.jar ${1} ${2}

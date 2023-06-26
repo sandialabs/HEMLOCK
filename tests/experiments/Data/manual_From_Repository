@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Experiments>
+	<Experiment ID="manual_From_Repository">
+
+		<Method>
+			<MethodType>KFoldCrossValidation</MethodType>
+			<NumberOfFolds>4</NumberOfFolds>
+			<Seed>1</Seed>
+		</Method>
+		
+
+		<ModelParameters>
+			<FrameworkType>weka</FrameworkType>
+			<ModelType>RandomTree</ModelType>
+			<Parameter name="seed">2</Parameter>
+		</ModelParameters>
+		
+		<Data>
+			<Method>Manual</Method>
+			<DataSets>
+				<DataSet>
+					<Repository>data</Repository>
+					<Name>discrete_2</Name>
+					<Format>modifiedC45</Format>
+				</DataSet>
+			</DataSets>
+		</Data>
+		<Metrics>
+			<Metric type="Accuracy" />
+			<Metric type="Confusion Matrix" />
+		</Metrics>
+
+	</Experiment>
+</Experiments>

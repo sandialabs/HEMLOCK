@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Experiments>
+	<Experiment ID="hetero_top66_SumRuleLoad">
+
+		<Method>
+			<MethodType>KFoldCrossValidation</MethodType>
+			<NumberOfFolds>2</NumberOfFolds>
+			<Seed>1</Seed>
+		</Method>
+
+		<ModelParameters>
+			<FrameworkType>hemlock</FrameworkType>
+			<ModelType>SumRule</ModelType>
+			<Parameter name="BaseClassifierSetID">1</Parameter>
+		</ModelParameters>
+		
+		<Data>
+			<Method>Auto</Method>
+			<Query>
+				<MissingValues value="no" />
+			</Query>
+		</Data>
+		<Metrics>
+			<Metric type="Accuracy" />
+			<Metric type="Confusion Matrix" />
+		</Metrics>
+
+	</Experiment>
+	
+	<BaseClassifiers>
+		<Set ID="1" Type="LoadModels" Path="tests/experiments/results/ModelSerialization/1">
+		</Set>
+	</BaseClassifiers>
+</Experiments>
