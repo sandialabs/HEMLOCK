@@ -1,4 +1,4 @@
-Heterogeneous Ensemble Machine Learning Open Classification Kit (HEMLOCK) 
+# Heterogeneous Ensemble Machine Learning Open Classification Kit (HEMLOCK) 
 
 HEMLOCK is a software tool for constructing, evaluating, and applying 
 heterogeneous ensemble data models for use in solving supervised machine 
@@ -9,7 +9,7 @@ of various data readers, machine learning algorithms, model combination and
 comparison routines, evaluation methods for model performance testing, and 
 interfaces to external, state-of-the-art machine learning software libraries.
 
-# Compiling
+## Compiling
 
 In order to compile Hemlock, an Ant build file, `build.xml` is provided.
 Provided an Apache Ant framework is installed on the machine, the following
@@ -21,7 +21,7 @@ In order to interface with Weka, weka.jar must be in the class path or in the
 message if weka.jar is not in either of those locations when running the Ant
 build file.
 
-# Installation
+## Installation
 
 The project must be built before using as the executables are not distributed.
 See the section titled "Compiling" for more information.
@@ -31,7 +31,7 @@ In order to interface with Weka, `weka.jar` must be in the class path or in the
 experiments that request the use of Weka will not be executed and an error
 message will be displayed.
 
-# Adding Data Sets
+## Adding Data Sets
 
 Hemlock can only import one type of data set.  It is a modification of the C45
 file format.  Each data set must have a `*.name` file and `*.data` file.  The
@@ -48,7 +48,7 @@ you have created.  By default the `HEMLOCK/data` directory is already setup as
 a data repository so data directories can be immediately dropped in that
 location for use by Hemlock.
 
-# Running Hemlock
+## Running Hemlock
 
 Use `runHemlock [inputPath] [outPutPath]` to run Hemlock.  The two arguments
 are required.  
